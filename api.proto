@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+//[MAINTAINING CONNECTION]
+message PingRequest
+{
+string clientIp = 1;
+};
+
+message PingResponse{};
+
+//[SERVICES]
+service MaintainingApi {
+    rpc Ping (PingRequest) returns (PingResponse) {}
+}
